@@ -3,7 +3,7 @@
 using namespace std;
 
 //数据规模取2的幂，方便后续设计算法
-const long long int SCALE = 131072;   //1024, 8192, 32768, 131072
+const long long int SCALE = 256;   //1024, 8192, 32768, 131072
 long long int vector[SCALE], sum = 0;
 
 LARGE_INTEGER nFreq;
@@ -18,7 +18,6 @@ void initdata(){
     }
 }
 
-//采用相邻配对原则, 两两相加，一层层累加求和，并行求解
 double loopunrolling() {
     double time = 0;
     long long int sum1 = 0;
